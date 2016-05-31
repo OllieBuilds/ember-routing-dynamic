@@ -6,6 +6,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  // dynamic route!!!
+  this.route('products');
+  // static routes
   this.route('about');
   this.route('contact');
   this.route('team', function(){
@@ -13,6 +16,9 @@ Router.map(function() {
     this.route('leadership');
     this.route('sales');
   });
+  this.route('product', {path: '/products/:product_id'});
+  this.route('employee', {path: '/employees/:employee_id'});
+  this.route('employees');
 });
 
 export default Router;
